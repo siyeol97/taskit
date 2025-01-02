@@ -1,3 +1,5 @@
+import styles from './page.module.scss';
+
 export default function Home() {
-  return <div>Taskit</div>;
+  return <div className={styles.div}>Taskit</div>;
 }
