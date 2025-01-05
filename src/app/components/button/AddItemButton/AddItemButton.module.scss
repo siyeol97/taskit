@@ -1,0 +1,99 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.button {
+  @include flex();
+  border: 1px solid $gray_D9D9D9;
+  background-color: $white_FFFFFF;
+  cursor: pointer;
+  &:hover {
+    background-color: $gray_EEEEEE;
+  }
+}
+
+.add_column {
+  height: 70px;
+  padding: 24.5px 86px;
+  border-radius: 8px;
+
+  & .add_column_container {
+    @include flex();
+    gap: 12px;
+    & span {
+      color: $black_333236;
+      font-size: 18px;
+      font-weight: 700;
+    }
+  }
+}
+
+.add_todo {
+  padding: 9px 146px;
+  border-radius: 6px;
+}
+
+.add_board {
+  padding: 24px 98px;
+  height: 70px;
+  border-radius: 8px;
+
+  & .add_board_container {
+    @include flex();
+    gap: 12px;
+    & span {
+      color: $black_333236;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+}
+
+@include tablet {
+  .add_column {
+    width: 100%;
+  }
+
+  .add_todo {
+    width: 100%;
+  }
+
+  .add_board {
+    width: 100%;
+    padding: 23px 56px;
+    height: 68px;
+  }
+}
+
+@include mobile {
+  .add_column {
+    padding: 20px 60px;
+    height: 60px;
+
+    & .add_column_container {
+      & span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  .add_todo {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    height: 32px;
+  }
+
+  .add_chip {
+    width: 20px;
+    height: 20px;
+  }
+
+  .add_board {
+    padding: 19px 70px;
+    height: 58px;
+    & .add_board_container {
+      & span {
+        font-size: 14px;
+      }
+    }
+  }
+}
