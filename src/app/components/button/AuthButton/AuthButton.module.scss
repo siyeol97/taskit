@@ -1,0 +1,40 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.button {
+  @include flex();
+  width: 520px;
+  height: 50px;
+  padding: 14px 236px;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  background-color: $violet_5534DA;
+  color: $white_FFFFFF;
+  font-weight: 500;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  line-height: normal;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.9;
+  }
+}
+
+.inactive {
+  background-color: $gray_9FA6B2;
+  cursor: not-allowed;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+@include tablet {
+  .button {
+    width: 351px;
+    padding: 14px 152px;
+  }
+}
