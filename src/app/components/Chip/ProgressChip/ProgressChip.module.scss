@@ -1,0 +1,17 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  @include inline-flex();
+  padding: 4px 8px;
+  gap: 6px;
+  border-radius: 11px;
+  background: $violet_8pct;
+  & span {
+    color: $violet_5534DA;
+    font-size: 12px;
+    @include mobile {
+      font-size: 10px;
+    }
+  }
+}
