@@ -4,6 +4,12 @@
   justify-content: $justify;
 }
 
+@mixin inline-flex($justify: center, $align: center) {
+  display: inline-flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
 @mixin tablet {
   @media (max-width: 1200px) {
     @content;

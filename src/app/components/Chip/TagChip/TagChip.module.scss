@@ -1,0 +1,16 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  @include inline-flex();
+  padding: 4px 6px;
+  gap: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  background: #f9eee3;
+  color: #d58d49;
+
+  @include mobile {
+    font-size: 10px;
+  }
+}
