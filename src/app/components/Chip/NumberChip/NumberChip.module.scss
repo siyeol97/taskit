@@ -1,0 +1,13 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  @include inline-flex();
+  padding: 3px 6px;
+  flex-direction: column;
+  color: $gray_787486;
+  font-size: 12px;
+  font-weight: 500;
+  border-radius: 4px;
+  background: $gray_EEEEEE;
+}
