@@ -1,0 +1,54 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  @include flex($justify: flex-start);
+  padding: 12px;
+  gap: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+
+  & span {
+    color: $gray_787486;
+    font-size: 18px;
+    font-weight: 500;
+    margin-right: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &:hover {
+    background-color: $gray_FAFAFA;
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #7ac555;
+  border-radius: 50%;
+}
+
+@include tablet {
+  .wrapper {
+    padding: 12px 10px;
+    & span {
+      font-size: 16px;
+      margin-right: 4px;
+    }
+  }
+}
+
+@include mobile {
+  .wrapper {
+    display: block;
+    width: 40px;
+    height: 40px;
+    padding: 16px;
+    & span {
+      display: none;
+    }
+  }
+}

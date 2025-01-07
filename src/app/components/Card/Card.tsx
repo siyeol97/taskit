@@ -14,9 +14,10 @@ export default function Card({ image }: Props) {
           <div className={styles.image_container}>
             <Image
               src={image}
-              fill
               alt='card-image'
-              objectFit='cover'
+              width={74}
+              height={18}
+              style={{ objectFit: 'contain' }}
             />
           </div>
         )}

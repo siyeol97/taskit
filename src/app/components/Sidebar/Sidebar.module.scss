@@ -1,0 +1,76 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+  width: 300px;
+  min-height: 100vh;
+  border-right: 2px solid $gray_D9D9D9;
+  padding: 20px 12px;
+}
+
+.container {
+  margin: 0 12px 15px;
+}
+
+.logo_box {
+  position: relative;
+  width: 109px;
+  height: 33px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+
+.dashboard_list_head {
+  @include flex($justify: space-between);
+  flex: 1;
+
+  & span {
+    color: $gray_787486;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+.add_image_box {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+@include tablet {
+  .wrapper {
+    width: 200px;
+  }
+}
+
+@include mobile {
+  .wrapper {
+    width: 67px;
+    padding: 20px 12px;
+  }
+
+  .dashboard_list_head {
+    & span {
+      display: none;
+    }
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .container {
+    margin: 0 12px 22px;
+  }
+
+  .logo_box {
+    width: 20px;
+    height: 20px;
+    margin-bottom: 40px;
+    background-image: url('../../../../public/Taskit_small.svg');
+    object-fit: fill;
+    background-repeat: no-repeat;
+  }
+}
