@@ -1,0 +1,83 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.wrapper {
+  @include flex($justify: space-between);
+  width: 100%;
+  height: 70px;
+  padding: 16px 0;
+  border-bottom: 2px solid $gray_D9D9D9;
+}
+
+.title {
+  color: $black_333236;
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 40px;
+}
+
+.user_info_container {
+  @include flex();
+  gap: 12px;
+  margin-right: 80px;
+  margin-left: 32px;
+}
+
+.avatar {
+  position: relative;
+  background-color: #a3c4a2;
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+}
+
+.avatar_user_name {
+  position: absolute;
+  color: $white_FFFFFF;
+  font-size: 16px;
+  font-weight: 600;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.user_name {
+  color: $black_333236;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+@include tablet {
+  .user_info_container {
+    margin-right: 40px;
+  }
+}
+
+@include mobile {
+  .wrapper {
+    padding: 13px 0;
+  }
+
+  .title {
+    font-size: 18px;
+    margin-left: 24px;
+  }
+
+  .user_info_container {
+    margin-right: 12px;
+  }
+
+  .avatar {
+    width: 34px;
+    height: 34px;
+  }
+
+  .avatar_user_name {
+    font-size: 14px;
+  }
+
+  .user_name {
+    display: none;
+  }
+}

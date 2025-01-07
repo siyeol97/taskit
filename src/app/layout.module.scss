@@ -1,0 +1,13 @@
+@use './styles/mixins' as *;
+@use './styles/variables' as *;
+
+.wrapper {
+  @include flex($justify: flex-start, $align: flex-start);
+  width: 100%;
+}
+
+.content {
+  @include flex($justify: flex-start);
+  flex-direction: column;
+  flex: 1;
+}

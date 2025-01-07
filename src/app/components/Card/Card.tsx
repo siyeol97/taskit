@@ -53,7 +53,7 @@ export default function Card({ image }: Props) {
             </div>
             {/* TODO: 작성자 아바타 컴포넌트 */}
             <div className={styles.avatar}>
-              <span className={styles.user_name}>시열</span>
+              <span className={styles.avatar_user_name}>시열</span>
             </div>
           </div>
         </div>
