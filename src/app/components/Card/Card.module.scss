@@ -1,0 +1,151 @@
+@use '../../styles/mixins' as *;
+@use '../../styles/variables' as *;
+
+.wrapper {
+  width: 314px;
+  border-radius: 6px;
+  border: 1px solid $gray_D9D9D9;
+  background: $white_FFFFFF;
+  padding: 20px;
+}
+
+.image_container {
+  position: relative;
+  width: 274px;
+  height: 160px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.head_container {
+  @include inline-flex($align: flex-start);
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.title {
+  color: $black_333236;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.tag_box {
+  @include flex($align: center);
+  gap: 6px;
+}
+
+.write_info_container {
+  @include flex($justify: space-between, $align: center);
+}
+
+.date_box {
+  @include flex($align: center);
+  gap: 6px;
+}
+
+.date {
+  color: $gray_787486;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.avatar {
+  position: relative;
+  background-color: #a3c4a2;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+}
+
+.user_name {
+  position: absolute;
+  color: $white_FFFFFF;
+  font-size: 12px;
+  font-weight: 500;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+@include tablet {
+  .wrapper {
+    width: 100%;
+  }
+
+  .container {
+    @include flex($justify: flex-start, $align: flex-start);
+    gap: 20px;
+  }
+
+  .image_container {
+    width: 90px;
+    height: 53px;
+    margin-bottom: 0;
+  }
+
+  .head_container {
+    margin-bottom: 0;
+  }
+
+  .info_container {
+    @include flex($justify: space-between, $align: flex-end);
+    flex: 1;
+    gap: 16px;
+  }
+
+  .write_info_container {
+    flex: 1;
+  }
+}
+
+@include mobile {
+  .wrapper {
+    width: 284px;
+    padding: 12px;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .info_container {
+    display: block;
+  }
+
+  .image_container {
+    width: 260px;
+    height: 152px;
+    margin-bottom: 10px;
+  }
+
+  .head_container {
+    gap: 6px;
+    margin-bottom: 6px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .date {
+    font-size: 10px;
+  }
+
+  .calendar_icon {
+    width: 14px;
+    height: 14px;
+  }
+
+  .avatar {
+    width: 22px;
+    height: 22px;
+  }
+
+  .user_name {
+    font-size: 10px;
+  }
+}
