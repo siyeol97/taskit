@@ -1,7 +1,7 @@
 'use client';
 
+import AuthButton from '@/components/button/AuthButton/AuthButton';
 import styles from './LoginForm.module.scss';
-import AuthButton from '@/app/components/button/AuthButton/AuthButton';
 
 export default function LoginForm() {
   return (
