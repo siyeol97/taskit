@@ -1,9 +1,6 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
 import './styles/global.scss';
-import Sidebar from './components/Sidebar/Sidebar';
-import styles from './layout.module.scss';
-import Header from './components/Header/Header';
 
 export const metadata: Metadata = {
   title: 'Taskit',
@@ -28,15 +25,7 @@ export default function RootLayout({
       lang='kr'
       className={`${pretendard.variable}`}
     >
-      <body className={pretendard.className}>
-        <main className={styles.wrapper}>
-          <Sidebar />
-          <section className={styles.content}>
-            <Header />
-            {children}
-          </section>
-        </main>
-      </body>
+      <body className={pretendard.className}>{children}</body>
     </html>
   );
 }
