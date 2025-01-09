@@ -1,7 +1,7 @@
+import styles from './SignupForm.module.scss';
 import AuthButton from '@/components/button/AuthButton/AuthButton';
-import styles from './LoginForm.module.scss';
 
-export default function LoginForm() {
+export default function SignupForm() {
   return (
     <section className={styles.container}>
       <form className={styles.form}>
@@ -29,7 +29,7 @@ export default function LoginForm() {
           <p className={styles.error_message}>비밀번호를 확인해주세요.</p>
           {/* <p className={styles.error_message}>{errors.password?.message}</p> */}
         </div>
-        <AuthButton text='로그인' />
+        <AuthButton text='가입하기' />
       </form>
     </section>
   );
