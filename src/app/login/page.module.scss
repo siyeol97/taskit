@@ -5,5 +5,24 @@
   @include flex();
   flex-direction: column;
   min-height: 100vh;
-  gap: 40px;
+  gap: 20px;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.go_register {
+  font-size: 14px;
+  text-align: center;
+
+  & a {
+    color: $violet_5534DA;
+    font-weight: 500;
+    margin-left: 5px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
 }
