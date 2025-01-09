@@ -3,7 +3,10 @@ import localFont from 'next/font/local';
 import '../styles/global.scss';
 
 export const metadata: Metadata = {
-  title: 'Taskit',
+  title: {
+    template: '%s | Taskit',
+    default: 'Loading...',
+  },
   description:
     '"Taskit" is a user-friendly task management app that helps organize and manage daily tasks efficiently.',
 };
