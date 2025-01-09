@@ -2,7 +2,10 @@
 @use '../../../styles/variables' as *;
 
 .wrapper {
-  width: 1022px;
+  @include flex($justify: flex-start, $align: flex-start);
+  flex-direction: column;
+  width: 100%;
+  max-width: 1022px;
   height: 600px;
   background-color: $white_FFFFFF;
   border-radius: 8px;
@@ -13,4 +16,5 @@
   color: $black_333236;
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 20px;
 }

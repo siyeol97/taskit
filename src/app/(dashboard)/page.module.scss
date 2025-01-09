@@ -2,8 +2,15 @@
 @use '../../styles/variables' as *;
 
 .wrapper {
-  @include flex();
+  @include flex($justify: flex-start, $align: flex-start);
   width: 100%;
   min-height: calc(100vh - 70px);
   background-color: $gray_FAFAFA;
+  padding: 40px;
+}
+
+@include mobile {
+  .wrapper {
+    padding: 24px;
+  }
 }
