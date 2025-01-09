@@ -1,6 +1,9 @@
 @use '../../styles/mixins' as *;
 @use '../../styles/variables' as *;
 
-.div {
-  color: $black_000000;
+.wrapper {
+  @include flex();
+  width: 100%;
+  min-height: calc(100vh - 70px);
+  background-color: $gray_FAFAFA;
 }
