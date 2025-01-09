@@ -1,11 +1,14 @@
-import SearchInput from '@/components/Input/SearchInput/SearchInput';
 import styles from './InviteContainer.module.scss';
 
-export default function InviteContainer() {
+interface Props {
+  children?: React.ReactNode;
+}
+
+export default function InviteContainer({ children }: Props) {
   return (
     <div className={styles.wrapper}>
       <p className={styles.title}>초대받은 대시보드</p>
-      <SearchInput />
+      {children}
     </div>
   );
 }
