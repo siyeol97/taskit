@@ -1,0 +1,23 @@
+@use '../../../styles/mixins' as *;
+@use '../../../styles/variables' as *;
+
+.wrapper {
+  position: relative;
+}
+
+.search_icon {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+.container {
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid $gray_D9D9D9;
+  padding: 10px 48px;
+
+  &:focus {
+    outline: none;
+  }
+}
