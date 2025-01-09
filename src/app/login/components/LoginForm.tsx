@@ -6,7 +6,7 @@ export default function LoginForm() {
     <section className={styles.container}>
       <form className={styles.form}>
         <div className={styles.input_box}>
-          <label htmlFor='email'>Email</label>
+          <label htmlFor='email'>이메일</label>
           <input
             id='email'
             type='email'
@@ -18,7 +18,7 @@ export default function LoginForm() {
           <p className={styles.error_message}>이메일을 확인해주세요.</p>
         </div>
         <div className={styles.input_box}>
-          <label htmlFor='password'>Password</label>
+          <label htmlFor='password'>비밀번호</label>
           <input
             id='password'
             type='password'
